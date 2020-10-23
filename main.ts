@@ -1,3 +1,6 @@
+let Word2 = ""
+let Word1 = ""
+let paragraph = ["a", "b", "c"]
 class conjunctionJunction{
 
 and(text1: string, text2: string) {
@@ -11,5 +14,18 @@ or(text1: string, text2: string) {
 
 }
 let tester = new conjunctionJunction();
-game.showLongText(tester.and("shawn", "good"), DialogLayout.Bottom)
-game.showLongText(tester.or("shawn", "good"), DialogLayout.Bottom)
+let swithcInt = 1
+for (let index = 0; index <= 0; index++) {
+    Word1 = game.askForString("")
+    Word2 = game.askForString("")
+    if (swithcInt == 1) {
+        paragraph[index] = tester.and(Word1, Word2)
+        swithcInt = 2
+    } else {
+        paragraph[index] = tester.or(Word1, Word2)
+        swithcInt = 1
+    }
+}
+for (let value of paragraph) {
+    console.log(value)
+}
